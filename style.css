@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url(/assets/fonts/Poppins-Regular.ttf);
+    /* font-weight: 800i; */
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url(/assets/fonts/Poppins-Bold.ttf);
+
+}
+
+@font-face {
+    font-family: 'poppins-italic';
+    src: url(/assets/fonts/Poppins-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'p-italic';
+    src: url(/assets/fonts/Poppins-Italic.ttf);
+}
+
+
+@font-face {
+    font-family: 'poppins-bolder';
+    src: url(/assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'poppins-bold';
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'poppins-bold';
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+  } */
+  
+  /* Dark theme */
+  /* body.dark-theme {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  header.dark-theme {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
+  .dark-theme{
+    background-color: #333;
+    color: #f0f0f0;
+  } */
+
+.form-contain {
+    background-color: white;
+    /* background-color: rgb(138, 132, 121); */
+    height: 40rem;
+    width: 50rem;
+
+    border-radius: 20px 20px 150px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.age-calc{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+    height: 10rem;
+    width: 40rem;
+
+    font-size: 1.5em;
+    /* background-color: hsl(0, 0%, 86%); */
+    /* outline: 1px saddlebrown solid; */
+}
+
+.date-container > label {
+    font-family: 'p-italic';
+    font-size: .7em;
+    color: var(--color);
+}
+
+.date-container > input {
+    font-size: 1.2em;
+    padding-left: 15px;    
+    border: none;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 10px;
+    outline: 1px solid var(--color);
+    font-family: 'poppins-bolder';
+}
+
+input::placeholder{
+    font-family: 'poppins-bold';
+    opacity:.7!important;
+}
+
+.display-age{
+    /* outline: 1px solid green; */
+    width: 40rem;
+    height: 30rem;
+    font-size: 6em;
+    font-family: 'poppins-bolder'!important;
+
+    
+
+    border-top: 1px solid var(--color);
+    margin-left: 4rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+.display-age > p {
+    display: flex;
+}
+
+.date-disp-contain{
+    display: flex;
+    /* outline: 12px solid red; */
+}
+
+
+#submit{
+    position: absolute;
+    border: none;
+    bottom: -50px;
+    right: -100px;
+
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    height: 100px;
+    width: 100px;
+
+    transition: .12s ease-in;
+
+    border-radius: 50%;
+    background-color: var(--color);
+}
+
+#submit:hover{
+    background-color: hsl(259, 100%, 65%);
+}
+
+
+/* error */
+
+.date-container{
+    position: relative;
+}
+
+.error{
+    /* visibility: hidden; */
+    position: absolute;
+    font-size: .5em;
+    color: hsl(0, 100%, 67%);
+    bottom: 0;
+    left: 0px;
+    transform: translateY(23px);
+}
+
+.error-border{
+    outline: 1px solid hsl(0, 100%, 67%)!important;
+}
+
+.correct{
+    /* color: rgb(209, 23, 172); */
+    /* outline: 1px solid var(--color); */
+    /* outline: 1px solid rgb(77, 209, 6)!important; */
+    outline: 1px solid hsl(259, 100%, 65%)!important;
+}
+
+
+.message-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}
+
+.num-style {
+    color: hsl(259, 100%, 65%)
+}
+
+
+
+@media (max-width: 375px){
+
+
+    .form-contain{
+        width: 360px;
+        height: 480px;
+
+        border-radius: 20px 20px 80px 20px;
+    }
+
+    .age-calc{
+        height: 100px;
+        width: 360px;
+        margin-bottom: 50px;
+    }
+
+    .display-age{
+        width: 330px;
+        height: 400px;
+        font-size: 3.5em;
+
+        margin-left: 15px;
+    }
+
+
+    #submit{
+
+        top: 110px;
+        left: 140px;
+
+        width: 80px;
+        height: 80px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+
+    .date-container > label {
+        font-size: .7em;
+    }
+    
+    .date-container > input {
+        font-size: 1em;
+        padding-left: 15px; 
+        width: 5rem;
+    }
+
+    .error{
+        font-size: .3em;
+        transform: translateY(18px);
+    }
+}
