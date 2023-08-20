@@ -233,13 +233,14 @@ input::placeholder{
     .age-calc{
         height: 100px;
         width: 360px;
-        margin-bottom: 50px;
+        padding-bottom: 70px;
     }
 
     .display-age{
         width: 330px;
-        height: 400px;
+        height: 350px;
         font-size: 3.5em;
+
 
         margin-left: 15px;
     }
@@ -247,11 +248,11 @@ input::placeholder{
 
     #submit{
 
-        top: 110px;
+        top: 135px;
         left: 140px;
 
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         padding-left: 0px;
         padding-right: 0px;
     }
